@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        nav {
+            padding: 0 100px;
+            /* height: 75px; */
+            width: 100%;
+            line-height: 75px;
+            background: #ffffff;
+        }
+
+        .logo {
+            display: flex;
+            align-content: center;
+        }
+
+        ul li {
+            display: inline-block;
+        }
+
+        nav ul li a {
+            font-size: 16px;
+            font-family: "DM Sans";
+            font-weight: bold;
+            color: #000000;
+            padding: 0 20px;
+            text-transform: uppercase;
+        }
+
+        .checkbtn {
+            line-height: 80px;
+            font-size: 30px;
+            color: black;
+            line-height: 80px;
+            display: none;
+        }
+
+        #check {
+            display: none;
+        }
+
+        .marginClass {
+            margin-left: 100px;
+        }
+
+        .navBtn {
+            background: none;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            font-family: "DM Sans";
+            background-color: #fb8e0b;
+            width: 167px;
+            height: 50px;
+            color: white;
+            border-radius: 5px;
+        }
+
+        @media (max-width:852px) {
+            nav {
+                padding: 0 0;
+            }
+
+            .checkbtn {
+                display: block;
+            }
+
+            .marginClass {
+                margin-left: 0px;
+            }
+
+            ul {
+                position: fixed;
+                width: 100%;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+            }
+
+            nav ul li {
+                display: block;
+            }
+
+            nav ul li a{
+                height: 50px;
+            }
+
+            #check:checked~ul {
+                left: 0;
+            }
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/1a25225f80.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav style="display: flex;gap:10px;justify-content: space-between;">
+        <div class="logo">
+            <a href="#" style="margin-top: 7px;"><img src="assets/images/logo.png" alt=""></a>
+            <a href="#"><img src="assets/images/logo-x.png" alt=""></a>
+        </div>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa fa-bars"></i>
+        </label>
+        <ul>
+            <li><a href="#">Demos</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">blog</a></li>
+            <li><a href="#">pages</a></li>
+            <li><a href="#">contact</a></li>
+            <li class="marginClass"><a href="#">login</a></li>
+            <li><button class="navBtn ">Get Started Free</button></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
